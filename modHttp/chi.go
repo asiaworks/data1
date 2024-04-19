@@ -32,7 +32,7 @@ func (pSelf *CHttpServer) initialize() error {
 }
 
 func (pSelf *CHttpServer) start() error {
-	return http.ListenAndServe(fmt.Sprintf(":%d", modUtility.G_HttpPort), pSelf.chiInst)
+	return http.ListenAndServe(fmt.Sprintf("[::]:%d", modUtility.G_HttpPort), pSelf.chiInst)
 }
 
 /*
